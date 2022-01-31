@@ -1,5 +1,15 @@
 # Repo Description
-
+## Folders
+* **rawZone** : Folder storing the data received from user (place sample data in csv here), in raw format   
+* **historyZone** : Folder storing data for history purposes   
+* **ConsumerZone** : Folder storing data treated ready to use or go to DW   
+* **logs** : Folder storing logs from script execution
+## Files
+* **functions.ipynb** : Notebook file containing fcuntions to answer specific business questions   
+* **requirements.txt** : Packages dependencies for python scripts      
+* **scoperty_utils** : Shared functions to be used across python scripts      
+* **rz_hz_scoperty** : Python script to extract data from rawZone folder to historyZone folder  
+* **hz_cz_scoperty** : Python script to transform data from historyZone folder to consumerZone folder, with minimal treatment
 
 # Scoperty Properties Functions
 In the notebook functions.ipynb there are 2 functions to retrieve lat and lon based address info and most expensive and cheapest zip codes
@@ -16,11 +26,26 @@ Returns lat and lon in a dataframe
 ## min_max_pricy_zip_code()
 This function always return the most expensive and cheapest zip codes reading data from the Consumer Zone.
 
-# Scoperty Properties ETL MVP
+# Scoperty Properties ETL Propoasal
 ## Propoasal
-<img src="https://github.com/cassiobolba/scoperty/blob/main/Architecture_Overview.png"> 
+<img src="https://github.com/cassiobolba/scoperty/blob/main/Architecture_Overview.png">    
 
+### Source: 
+Variety of sources, from files, APIs, databases and other possbilities
+### Extraction, Tranformation and Loading:
+These layers will be powered by the folowwing stack:
+* Dataproc for spark cluster creations
+* Spark/python for data manipulation (here simulated by the python scripts)
+* Parquet file format to store data in GCP buckets
+* Cloud Logging to store and analyze logs (here simulated by the folder logs)
+* Cloud Composer (Airflow managed version) to orchestrate and integrate pipelines
+### DW
+Optional layer that can replace or co-exist with the loading layer described above.   
+Purpose of massive parallel processing SQL db.
+### Reporting
+Reporting layer for analitycal purposes. Here simulated by Power BI Reporting  
 
+# Scoperty Properties ETL MVP
 ## Setup Environment to test the scripts
 0 - Download or clone the repo   
 1 - Install virtual env
@@ -57,3 +82,6 @@ python3 rz_hz_scoperty.py
 python3 hz_cz_scoperty.py
 ```
 3 - Check results in the scoperty/logs   
+
+## Reporting - Data Exploration
+Representing the reporting layer on this MVP simulation, the Power BI report contains some data analysis and findings
