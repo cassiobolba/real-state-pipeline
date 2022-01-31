@@ -4,6 +4,7 @@
 * **historyZone** : Folder storing data for history purposes   
 * **ConsumerZone** : Folder storing data treated ready to use or go to DW   
 * **logs** : Folder storing logs from script execution
+* **img** : images used in readme
 ## Files
 * **functions.ipynb** : Notebook file containing fcuntions to answer specific business questions   
 * **requirements.txt** : Packages dependencies for python scripts      
@@ -28,7 +29,7 @@ This function always return the most expensive and cheapest zip codes reading da
 
 # Scoperty Properties ETL Propoasal
 ## Propoasal
-<img src="https://github.com/cassiobolba/scoperty/blob/main/Architecture_Overview.png">    
+<img src="https://github.com/cassiobolba/scoperty/blob/main/img/Architecture_Overview.png">    
 
 ### Source: 
 Variety of sources, from files, APIs, databases and other possbilities
@@ -87,7 +88,7 @@ python3 hz_cz_scoperty.py
 Representing the reporting layer on this MVP simulation, the Power BI report contains some data analysis and findings.   
 Sample Report:
 
-<img src="https://github.com/cassiobolba/scoperty/blob/main/Reporting-BI.png">
+<img src="https://github.com/cassiobolba/scoperty/blob/main/img/Reporting-BI.png">
 
 Findings:
 * Most expensive Neighborhood in 2021 is Westfriedhof
