@@ -84,4 +84,22 @@ python3 hz_cz_scoperty.py
 3 - Check results in the scoperty/logs   
 
 ## Reporting - Data Exploration
-Representing the reporting layer on this MVP simulation, the Power BI report contains some data analysis and findings
+Representing the reporting layer on this MVP simulation, the Power BI report contains some data analysis and findings.   
+Sample Report:
+
+<img src="https://github.com/cassiobolba/scoperty/blob/main/Reporting-BI.png">
+
+Findings:
+* Most expensive Neighborhood in 2021 is Westfriedhof
+* Least Expensive Neighborhood in 2021 is Barenschanze
+* Average property price in 2021 was around 1,57 mi
+* Majority of properties do not have parking
+* Half properties available are single family house 
+
+*disclaimer: values for sample purposes. More accurate business rules must be applied.*
+
+## Questions to clarify
+- Can a property have bigger living area than total area ?
+- To get the value of a property, should the price be  divided by the number of living units ?
+- Should properties with future construction date be considered? If yes, how many years from today?
+- Should properties with no prices be considered?
