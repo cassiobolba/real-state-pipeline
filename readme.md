@@ -1,3 +1,6 @@
+# Repo Description
+
+
 # Scoperty Properties Functions
 In the notebook functions.ipynb there are 2 functions to retrieve lat and lon based address info and most expensive and cheapest zip codes
 
@@ -15,15 +18,16 @@ This function always return the most expensive and cheapest zip codes reading da
 
 # Scoperty Properties ETL MVP
 ## Propoasal
+<img src="https://github.com/cassiobolba/scoperty/blob/main/Architecture_Overview.png"> 
 
 
 ## Setup Environment to test the scripts
-0 - Download or clone the repo
+0 - Download or clone the repo   
 1 - Install virtual env
 ```py
 py -m pip install --upgrade pip
 ```
-2 - Navigate to the folder /scoperty on the terminal
+2 - Navigate to the folder /scoperty on the terminal   
 3 - Creating a virtual environment
 ```py
 py -m venv env
@@ -39,7 +43,7 @@ py -m pip install -r requirements.txt
 
 ## Execute Scripts
 ### Extract Raw Zone to History Zone
-1 - Navigate to scoperty folder
+1 - Navigate to scoperty folder   
 2 - Execute the python file
 ```py
 python3 rz_hz_scoperty.py
@@ -47,9 +51,9 @@ python3 rz_hz_scoperty.py
 3 - Check results in the scoperty/logs
 
 ### Transform History Zone to Consumer Zone
-1 - Navigate to scoperty folder
-2 - Execute the python file
+1 - Navigate to scoperty folder      
+2 - Execute the python file   
 ```py
 python3 hz_cz_scoperty.py
 ```
-3 - Check results in the scoperty/logs
+3 - Check results in the scoperty/logs   
