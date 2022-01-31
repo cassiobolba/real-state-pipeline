@@ -1,0 +1,168 @@
+2022-01-31 00:43:55,319:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 00:43:55,319:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 00:43:55,324:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 00:43:55,326:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 00:43:55,414:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 00:47:09,315:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 00:47:09,316:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 00:47:09,321:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 00:47:09,323:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 00:47:09,397:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 00:48:04,445:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 00:48:04,445:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 00:48:04,451:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 00:48:04,453:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 00:49:17,512:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 00:49:17,513:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 00:49:17,518:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 00:49:17,521:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 00:49:17,754:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 01:01:55,227:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 01:01:55,228:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 01:01:55,234:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 01:01:55,237:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 01:02:55,173:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 01:02:55,174:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 01:02:55,179:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 01:02:55,181:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 07:35:49,813:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 07:35:49,814:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 07:35:49,820:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 07:35:49,823:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 07:35:50,019:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 18:32:14,140:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 18:32:14,141:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 18:32:14,142:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 18:32:14,143:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 18:32:14,185:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 18:33:19,557:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 18:33:19,557:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 18:33:19,558:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 18:33:19,559:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 18:33:19,583:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 18:33:40,896:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:33:40,909:INFO:scoperty_utils:Data read from consumerZone/scoperty-properties.parquet.gzip
+2022-01-31 18:33:40,920:INFO:scoperty_utils:Dataframes merged
+2022-01-31 18:33:40,927:ERROR:scoperty_utils:("Expected bytes, got a 'int' object", 'Conversion failed for column street_number with type object')
+Traceback (most recent call last):
+  File "/Users/cassiobolba/Documents/scoperty/scoperty_utils.py", line 24, in save_df_parquet
+    df.to_parquet(f'{destination}/{file_name}.parquet.gzip', compression='gzip')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/util/_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/core/frame.py", line 2677, in to_parquet
+    return to_parquet(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parquet.py", line 416, in to_parquet
+    impl.write(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parquet.py", line 173, in write
+    table = self.api.Table.from_pandas(df, **from_pandas_kwargs)
+  File "pyarrow/table.pxi", line 1479, in pyarrow.lib.Table.from_pandas
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyarrow/pandas_compat.py", line 605, in dataframe_to_arrays
+    arrays[i] = maybe_fut.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyarrow/pandas_compat.py", line 577, in convert_column
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyarrow/pandas_compat.py", line 571, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow/array.pxi", line 301, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 83, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 107, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column street_number with type object')
+2022-01-31 18:35:11,723:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:35:11,738:INFO:scoperty_utils:Data read from consumerZone/scoperty-properties.parquet.gzip
+2022-01-31 18:35:11,750:INFO:scoperty_utils:Dataframes merged
+2022-01-31 18:35:11,795:ERROR:scoperty_utils:Error converting column "street_number" to bytes using encoding UTF8. Original error: bad argument type for built-in operation
+Traceback (most recent call last):
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 259, in convert
+    out = array_encode_utf8(data)
+  File "fastparquet/speedups.pyx", line 50, in fastparquet.speedups.array_encode_utf8
+TypeError: bad argument type for built-in operation
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/cassiobolba/Documents/scoperty/scoperty_utils.py", line 24, in save_df_parquet
+    df.to_parquet(f'{destination}/{file_name}.parquet.gzip', compression='gzip')
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/pandas/core/frame.py", line 2836, in to_parquet
+    return to_parquet(
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/pandas/io/parquet.py", line 420, in to_parquet
+    impl.write(
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/pandas/io/parquet.py", line 301, in write
+    self.api.write(
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 1222, in write
+    write_simple(filename, data, fmd,
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 882, in write_simple
+    rg = make_row_group(f, row_group, fmd.schema,
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 701, in make_row_group
+    chunk = write_column(f, coldata, column,
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 554, in write_column
+    repetition_data, definition_data, encode[encoding](data, selement), 8 * b'\x00'
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 354, in encode_plain
+    out = convert(data, se)
+  File "/Users/cassiobolba/Documents/scoperty/venv/lib/python3.9/site-packages/fastparquet/writer.py", line 284, in convert
+    raise ValueError('Error converting column "%s" to bytes using '
+ValueError: Error converting column "street_number" to bytes using encoding UTF8. Original error: bad argument type for built-in operation
+2022-01-31 18:37:54,082:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:38:00,059:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:39:33,973:INFO:scoperty_utils:Data read from rawZone/scoperty_sample_data.csv
+2022-01-31 18:39:33,973:INFO:scoperty_utils:Columns processing_date add to dataframe
+2022-01-31 18:39:33,978:INFO:scoperty_utils:construction_date converted to date_time
+2022-01-31 18:39:33,980:INFO:scoperty_utils:renovation_year converted to date_time
+2022-01-31 18:39:34,109:INFO:scoperty_utils:Dataframe saved as parque in historyZone 
+2022-01-31 18:39:39,514:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:39:39,515:ERROR:scoperty_utils:Could not open parquet input source '<Buffer>': Invalid: Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+Traceback (most recent call last):
+  File "/Users/cassiobolba/Documents/scoperty/scoperty_utils.py", line 159, in read_source_parquet
+    df = pd.read_parquet(source)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parquet.py", line 495, in read_parquet
+    return impl.read(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parquet.py", line 239, in read
+    result = self.api.parquet.read_table(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyarrow/parquet.py", line 1672, in read_table
+    dataset = _ParquetDatasetV2(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyarrow/parquet.py", line 1517, in __init__
+    [fragment], schema=fragment.physical_schema,
+  File "pyarrow/_dataset.pyx", line 723, in pyarrow._dataset.Fragment.physical_schema.__get__
+  File "pyarrow/error.pxi", line 122, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 99, in pyarrow.lib.check_status
+OSError: Could not open parquet input source '<Buffer>': Invalid: Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+2022-01-31 18:39:39,530:INFO:scoperty_utils:Dataframes merged
+2022-01-31 18:39:39,590:INFO:scoperty_utils:Dataframe saved as parque in consumerZone 
+2022-01-31 18:39:45,172:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:41:55,825:ERROR:scoperty_utils:[Errno 2] No such file or directory: '/Users/cassiobolba/Documents/scooperty/rawZone/scoperty_sample_data_.csv'
+Traceback (most recent call last):
+  File "/Users/cassiobolba/Documents/scoperty/scoperty_utils.py", line 90, in read_source_csv
+    df = pd.read_csv(source)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py", line 222, in _open_handles
+    self.handles = get_handle(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pandas/io/common.py", line 702, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/cassiobolba/Documents/scooperty/rawZone/scoperty_sample_data_.csv'
+2022-01-31 18:45:25,239:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:45:25,248:INFO:scoperty_utils:Data read from consumerZone/scoperty-properties.parquet.gzip
+2022-01-31 18:45:36,148:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:45:36,158:INFO:scoperty_utils:Data read from consumerZone/scoperty-properties.parquet.gzip
+2022-01-31 18:45:36,257:INFO:scoperty_utils:Dataframe saved as parque in consumerZone 
+2022-01-31 18:45:41,216:INFO:scoperty_utils:Data read from historyZone/scoperty-2022-01-31.parquet.gzip
+2022-01-31 18:45:41,230:INFO:scoperty_utils:Data read from consumerZone/scoperty-properties.parquet.gzip
+2022-01-31 18:45:41,249:INFO:scoperty_utils:Dataframes merged
+2022-01-31 18:45:41,340:INFO:scoperty_utils:Dataframe saved as parque in consumerZone 
+2022-01-31 19:49:38,764:INFO:scoperty_utils:Data read from consumerZone/scoperty-properties.parquet.gzip
