@@ -6,7 +6,7 @@
 * **logs** : Folder storing logs from script execution
 * **img** : images used in readme
 ## Files
-* **functions.ipynb** : Notebook file containing fcuntions to answer specific business questions   
+* **functions.ipynb** : Notebook file containing fcuntions to answer specific business questions. To be used as API / microservice.
 * **requirements.txt** : Packages dependencies for python scripts      
 * **scoperty_utils** : Shared functions to be used across python scripts      
 * **rz_hz_scoperty** : Python script to extract data from rawZone folder to historyZone folder  
